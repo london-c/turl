@@ -7,6 +7,14 @@
 //
 
 import Foundation
+import CoreServices
 
-print("Hello, World!")
+var p = Process()
+var cmd_args = CommandLine.arguments
 
+if(cmd_args.count < 2) {
+    print("Error 0: No arguments defined")
+    exit(0)
+}
+
+print(cmd_args.count)
