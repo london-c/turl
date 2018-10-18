@@ -10,11 +10,13 @@ import Foundation
 import CoreServices
 
 var p = Process()
-var cmd_args = CommandLine.arguments
+var cl_args = CommandLine.arguments
 
-if(cmd_args.count < 2) {
+if(cl_args.count < 2) {
     print("Error 0: No arguments defined")
     exit(0)
+} else {
+    checkArgument(withValue: cl_args.last!)
 }
 
-print(cmd_args.count)
+print("turl: There were \(cl_args.count) successful inputs!")
